@@ -1,0 +1,72 @@
+﻿Parallelism
+	TPL - Task Parallel Library - Microsoft's implementation for parallelism
+	Task - main building block - represents a unit of work that you want to be completed at some point in time
+	Thread vs Task - resources vs ideas
+
+Async/Await
+
+
+
+--------------
+
+Baking a cake
+-	Get ingredients
+		- Get flour
+		- Get eggs
+		- Get sugar
+-	Clean oven (10 minutes)
+-	Mix ingredients
+-	Wait for oven to finish cleaning
+-	Bake in oven
+
+
+Synchronous processing
+
+Synchronous (blocking)/Asynchronous (non-blocking) - How work is done
+Serial(1 worker) /Parallel (multiple workers) - How many workers
+
+
+1 worker - async
+1 worker - sync
+2 workers - sync
+2 workers - async
+
+
+worker1:		worker2:
+Get flour		Preheat oven1
+Get eggs		Preheat oven2
+			Preheat oven3
+			Pick my nose
+Get sugar		Bake in oven1/2/3
+Mix ingredients
+
+
+
+
+
+
+Main() {
+	DoDbSomethingAsync() {
+		GoToDatabaseAndGetDataAsync
+			SomeHardwareThing
+		ReturnDbData
+	}
+}
+
+
+
+
+MVC Framework (100 threads)
+	1: John asks for google.com
+	2: Robert asks for yahoo.com
+	...
+	1: John asks for google.com / Robert asks for yahoo.com
+
+
+
+
+
+
+
+
+
